@@ -1,34 +1,108 @@
-### **Banking Data Analytics Project**
+### **Banking Customer & Transaction Analysis Project**
 ## **Overview**
 
-This project is an end-to-end Data Analytics project based on the Banking domain.
-The goal is to analyze banking data, extract meaningful insights, and visualize them to support better business decision-making.
+With the rapid growth of digital banking, fraudulent transactions have become a significant concern for financial institutions.
+This project focuses on analyzing banking customer and transaction data to identify:
 
-The project demonstrates practical usage of Python, SQL, and Power BI following real-world analytics workflows.
+- Customer segments
+- Transaction trends
+- Risk indicators for fraud
+
+It also includes calculation of key KPIs and dashboard visualizations to support data-driven decision-making.
 
 ### **Problem Statement**
 
-Banking organizations generate large volumes of data, but raw data does not provide direct insights.
-This project focuses on cleaning, analyzing, and visualizing banking data to uncover trends, patterns, and key performance metrics that help stakeholders make data-driven decisions.
+With the rapid growth of digital banking, financial institutions face increasing challenges in monitoring customer behavior, transaction patterns, and potential fraudulent activities. This project aims to analyze banking customer and transaction data using SQL and Python to identify customer segments, transaction trends, and risk indicators. Additionally, KPI dashboards were developed to support data-driven decision-making.
 
 ### Folder Description
-- **data/** – Raw and cleaned banking datasets  
-- **sql/** – Database schema and analytical SQL queries  
-- **python/** – Data cleaning, EDA, and visualization notebooks  
-- **powerbi/** – Interactive Power BI dashboard  
+- **Database**: MySQL (SQL queries for aggregation, segmentation, and KPIs)
 
-### Key Analysis
+- **Python**: Pandas, NumPy, Matplotlib (EDA, visualizations, KPI validation)
 
-- **Data cleaning and preprocessing**
+- **Visualization / Dashboard**: Power BI / Tableau
 
-- **Customer and transaction analysis**
+- **Dataset**: Customers.csv, Accounts.csv, Transactions.csv
 
-- **Revenue and performance trends**
+## Project Steps
 
-- **SQL queries using joins, CTEs, and aggregations**
+### Step 1: Data Understanding
+- Explored datasets to understand features, types, and relationships.
+- Checked for missing values, duplicates, and inconsistencies.
 
-- **Business insights through dashboards**
+### Step 2: Data Cleaning
+- Converted date fields to proper formats.
+- Handled missing or inconsistent values.
+- Removed duplicates.
 
-### Conclusion
+### Step 3: Database Setup
+- Created `customers`, `accounts`, and `transactions` tables.
+- Established primary and foreign keys.
+- Imported CSVs using `LOAD DATA`.
 
-This project showcases how data analytics techniques can transform raw banking data into valuable insights using Python, SQL, and Power BI.
+### Step 4: Exploratory Data Analysis (EDA)
+- Analyzed transaction distribution, device usage, and merchant categories.
+- Visualized fraud vs non-fraud trends.
+- Identified anomalies and patterns.
+
+### Step 5: Customer Segmentation
+- Segmented customers based on:
+  - Transaction frequency (High / Medium / Low)
+  - Transaction value (High / Medium / Low)
+  - Risk (High-Risk / Low-Risk)
+
+### Step 6: Transaction Trend Analysis
+- Tracked daily and monthly transaction volumes.
+- Analyzed transaction amount trends.
+- Monitored fraud trends over time.
+
+### Step 7: Fraud & Risk Indicator Analysis
+- Identified suspicious patterns:
+  - High transaction amounts relative to customer average
+  - Multiple transactions in a short period
+  - High-risk merchant categories and device types
+- Created fraud summary and high-risk customer lists.
+
+### Step 8: KPI Calculation & Validation
+- Core KPIs:
+  - Total Customers
+  - Total Transactions
+  - Total Transaction Value
+  - Average Transaction Value
+  - Fraud Rate (%)
+  - High-Risk Customers Count
+  - Transactions by Device Type
+  - Transactions by Merchant Category
+- Validated KPIs using SQL and Python (Jupyter Notebook).
+
+### Step 9: Dashboard Visualization
+- Created interactive charts and dashboards for:
+  - Customer segmentation
+  - Transaction trends
+  - Fraud patterns
+  - Device & merchant analysis
+  
+ ## Key Insights
+
+- Most fraud occurs in high-value transactions.
+- Certain merchant categories and devices show higher fraud risk.
+- A small percentage of customers contribute the majority of transactions.
+- Peak transaction periods identified for resource planning and monitoring.
+
+## Future Improvements
+
+- Implement real-time fraud detection using machine learning.
+- Add geolocation and transaction location analysis.
+- Automate daily KPI monitoring dashboards.
+
+## Conclusion
+
+This project demonstrates an end-to-end analysis of banking customer and transaction data to identify trends, customer segments, and potential fraud risks.
+
+**Key takeaways:**
+
+- **Customer Segmentation:** Categorized customers based on transaction behavior, value, and risk.  
+- **Transaction Trend Analysis:** Revealed peak periods, spending patterns, and growth trends.  
+- **Fraud & Risk Analysis:** Identified high-risk customers, merchant categories, and devices contributing to fraudulent activities.  
+- **KPIs and Dashboard:** Provided actionable insights for management to monitor performance, detect anomalies, and make data-driven decisions.
+
+Overall, this project showcases the ability to combine SQL, Python, and visualization tools to extract meaningful business insights, enhance fraud detection, and support strategic decision-making in digital banking.
